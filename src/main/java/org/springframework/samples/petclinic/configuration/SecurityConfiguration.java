@@ -61,6 +61,7 @@ public class SecurityConfiguration {
 			.requestMatchers( "/api/v1/clinics","/", "/oups","/api/v1/auth/**","/v3/api-docs/**","/swagger-ui.html","/swagger-ui/**").permitAll()												
 			.requestMatchers("/api/v1/developers").permitAll()												
 			.requestMatchers("/api/v1/plan").hasAuthority("OWNER")
+			.requestMatchers("/api/v1/achievement").hasAuthority("OWNER")
 			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/users/**")).hasAuthority(ADMIN)
 			.requestMatchers("/api/v1/clinicOwners/all").hasAuthority(ADMIN)
 			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/clinicOwners/**")).hasAnyAuthority(ADMIN, CLINIC_OWNER)

@@ -48,6 +48,7 @@ import ConsultationEditClinicOwner from "./clinicOwner/consultations/Consultatio
 import VetListClinicOwner from "./clinicOwner/vets/VetListClinicOwner";
 import VetEditClinicOwner from "./clinicOwner/vets/VetEditClinicOwner";
 import DeveloperList from "./developers";
+import AchievementList from "./achievement";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -112,6 +113,7 @@ function App() {
           <Route path="/consultations" exact={true} element={<PrivateRoute><OwnerConsultationList /></PrivateRoute>} />
           <Route path="/consultations/:consultationId" exact={true} element={<PrivateRoute><OwnerConsultationEdit /></PrivateRoute>} />
           <Route path="/consultations/:consultationId/tickets" exact={true} element={<PrivateRoute><OwnerConsultationTickets /></PrivateRoute>} />
+          <Route path="/achievements" exact={true} element={<PrivateRoute><AchievementList /></PrivateRoute>} />
         </>)
     }
     if (role === "VET") {

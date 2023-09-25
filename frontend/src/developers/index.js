@@ -1,5 +1,5 @@
 import {
-    Table,
+    Table
   } from "reactstrap";
   import useFetchState from "../util/useFetchState"; //
   
