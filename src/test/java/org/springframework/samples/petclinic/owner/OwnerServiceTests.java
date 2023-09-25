@@ -63,7 +63,7 @@ public class OwnerServiceTests {
 	@Test
 	void shouldFindAllOwners() {
 		List<Owner> owners = (List<Owner>) this.ownerService.findAll();
-		assertEquals(10, owners.size());
+		assertEquals(11, owners.size());
 	}
 
 	@Test
@@ -181,7 +181,7 @@ public class OwnerServiceTests {
 		assertTrue(stats.containsKey("goldOwners"));
 		assertEquals(3, stats.get("goldOwners"));
 		assertTrue(stats.containsKey("platinumOwners"));
-		assertEquals(4, stats.get("platinumOwners"));
+		assertEquals(5, stats.get("platinumOwners"));
 		assertTrue(stats.containsKey("ownersVisits"));
 	}
 
