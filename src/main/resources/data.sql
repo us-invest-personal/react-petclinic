@@ -117,5 +117,5 @@ INSERT INTO consultation_tickets(id,description,creation_date, user_id, consulta
 
 INSERT INTO achievement(id,name,description,threshold,badge_image,metric) VALUES (1,'Experiencia básica','Si juegas 10 partidas o más',10.0,'https://cdn-icons-png.flaticon.com/512/5243/5243423.png','GAMES_PLAYED');
 INSERT INTO achievement(id,name,description,threshold,badge_image,metric) VALUES (2,'Explorador','Si juegas 25 partidas o más',25.0,'https://cdn-icons-png.flaticon.com/512/603/603855.png','GAMES_PLAYED');
-INSERT INTO achievement(id,name,description,threshold,badge_image,metric) VALUES (3,'Experto','Si ganas 20 partidas o más',20.0,'https://cdn-icons-png.flaticon.com/512/4737/4737471.png','VICTORIES');
+INSERT INTO achievement(id,name,description,threshold,metric) VALUES (3,'Experto','Si ganas 20 partidas o más',20.0,'VICTORIES');
                        

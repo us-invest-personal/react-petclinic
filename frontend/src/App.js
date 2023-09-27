@@ -47,7 +47,7 @@ import ConsultationListClinicOwner from "./clinicOwner/consultations/Consultatio
 import ConsultationEditClinicOwner from "./clinicOwner/consultations/ConsultationEditClinicOwner";
 import VetListClinicOwner from "./clinicOwner/vets/VetListClinicOwner";
 import VetEditClinicOwner from "./clinicOwner/vets/VetEditClinicOwner";
-import DeveloperList from "./developers";
+import DeveloperList from "./developers"; 
 import AchievementList from "./achievement";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
