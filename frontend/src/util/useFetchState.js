@@ -4,7 +4,7 @@ export default function useFetchState(initial, url, jwt, setMessage, setVisible,
     const [data, setData] = useState(initial);
     useEffect(() => {
         if (url) {
-            if (!id || id !== "new") {
+            if (id !== "new" && id!==0) {
                 let ignore = false;
                 fetch(url, {
                     headers: {

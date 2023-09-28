@@ -12,6 +12,7 @@ import org.springframework.samples.petclinic.exceptions.ResourceNotFoundExceptio
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -42,7 +43,7 @@ public class AchievementRestController {
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<Achievement> findAchievement(@PathParam("id") int id){
+	public ResponseEntity<Achievement> findAchievement(@PathVariable("id") int id){
 		Achievement achievementToGet=achievementService.getById(id);
 		if(achievementToGet==null)
 			throw new ResourceNotFoundException("Achievement with id "+id+" not found!");
@@ -60,7 +61,7 @@ public class AchievementRestController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<Void> modifyAchievement(@RequestBody @Valid Achievement newAchievement, BindingResult br,@PathParam("id") int id) {
+	public ResponseEntity<Void> modifyAchievement(@RequestBody @Valid Achievement newAchievement, BindingResult br,@PathVariable("id") int id) {
 		Achievement achievementToUpdate=this.findAchievement(id).getBody();
 		if(br.hasErrors())
 			throw new BadRequestException(br.getAllErrors());		
@@ -74,7 +75,7 @@ public class AchievementRestController {
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Void> deleteAchievement(@PathParam("id") int id){
+	public ResponseEntity<Void> deleteAchievement(@PathVariable("id") int id){
 		findAchievement(id);
 		achievementService.deleteAchievementById(id);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
